@@ -75,23 +75,23 @@
 
 //ternary operator
 
-// var a=prompt("give a number to check odd-even :");
+var a=prompt("give a number to check odd-even :");
 
-// var str='';
-// if(a%2==0){
-//     console.log("%d is odd!",a);
-//     str='odd!'
-//     console.log(str)
-// }else{
-//     console.log("the value is %d even",a)
-//     str='even'
-//     console.log(str)
-//     // alert("the value is %d is even ",a)
+var str='';
+if(a%2==0){
+    console.log("%d is odd!",a);
+    str='odd!'
+    console.log(str)
+}else{
+    console.log("the value is %d even",a)
+    str='even'
+    console.log(str)
+    // alert("the value is %d is even ",a)
     
-// }
+}
 
 
-// var result= a%2==0 ? 'even':'odd'
-// console.log(result)
+var result= a%2==0 ? 'even':'odd'
+console.log(result)
 //condition?"true":"false"...it is use one line statement when it is multiple line that case we use if else switch etc
 
