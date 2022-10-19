@@ -35,6 +35,7 @@ for(var i in point){
 // console.log(point.z)
 
 //delet operator 
+//delet operator 
 
 
 
