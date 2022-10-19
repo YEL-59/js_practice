@@ -70,9 +70,9 @@
 
 //join
 
-var menu =['home','about','contact','like']
-var arr=[1,2,3,4,5,6,7,8,9]
-var arr2=menu.concat(arr)
-menu.fill(0)
-console.log(menu.join(' /'))
-console.log(arr2)
+// var menu =['home','about','contact','like']
+// var arr=[1,2,3,4,5,6,7,8,9]
+// var arr2=menu.concat(arr)
+// menu.fill(0)
+// console.log(menu.join(' /'))
+// console.log(arr2)
