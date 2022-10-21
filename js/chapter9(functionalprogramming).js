@@ -338,23 +338,25 @@ console.log(myfilter(arr));
 
 var filterArray = [4, 8, 1, 3, 5, 6, 4, 3, 9];
 
-function tofayelfilter(filterArray,cd) {
+function tofayelfilter(filterArray, cd) {
   var reArray = [];
   for (var i = 0; i < filterArray.length; i++) {
-    if (cd(filterArray[i], i,filterArray)) {
+    if (cd(filterArray[i], i, filterArray)) {
       reArray.push(filterArray[i]);
     }
   }
-  return reArray
+  return reArray;
 }
 
-var result20=tofayelfilter(filterArray,function(value){
-    return value%2==1
-})
-console.log(result20)
-console.log(tofayelfilter(filterArray,function(value){
-    return value>4
-}))
+var result20 = tofayelfilter(filterArray, function (value) {
+  return value % 2 == 1;
+});
+console.log(result20);
+console.log(
+  tofayelfilter(filterArray, function (value) {
+    return value > 4;
+  })
+);
 // var farray=arr.filter(function(value){
 //     return value >4//value%2==0
 // })
@@ -362,54 +364,149 @@ console.log(tofayelfilter(filterArray,function(value){
 
 //Reduce Function
 
-var arr5=[1,2,3,4,5]
-var sum = arr5.reduce(function(prev,curr){
-    return prev +curr
-},100)
-var max = arr5.reduce(function(prev,curr){
-    return Math.max(prev,curr)
-},0)
-console.log(sum)
-console.log(max)
+var arr5 = [1, 2, 3, 4, 5];
+var sum = arr5.reduce(function (prev, curr) {
+  return prev + curr;
+}, 100);
+var max = arr5.reduce(function (prev, curr) {
+  return Math.max(prev, curr);
+}, 0);
+console.log(sum);
+console.log(max);
 
-
-function myreduce(arr5,cb,acc){
-    for(var i=0;i<arr5.length;i++){
-        acc=cb(acc,arr[i])
-    }
-    return acc
+function myreduce(arr5, cb, acc) {
+  for (var i = 0; i < arr5.length; i++) {
+    acc = cb(acc, arr[i]);
+  }
+  return acc;
 }
 
-var sum=myreduce(arr5,function(prev,curr){
-    return prev+curr
-},0)
-var max=myreduce(arr5,function(prev,curr){
-    return Math.max(prev,curr)
-},0)
-var min=myreduce(arr5,function(prev,curr){
-    return Math.min(prev,curr)
-},arr5[0])
+var sum = myreduce(
+  arr5,
+  function (prev, curr) {
+    return prev + curr;
+  },
+  0
+);
+var max = myreduce(
+  arr5,
+  function (prev, curr) {
+    return Math.max(prev, curr);
+  },
+  0
+);
+var min = myreduce(
+  arr5,
+  function (prev, curr) {
+    return Math.min(prev, curr);
+  },
+  arr5[0]
+);
 
-
-console.log(sum,max,min)
+console.log(sum, max, min);
 
 //Find Function
 
-var arrarr=[1,2,3,4,5,6,,1,22,34,5,6]
+var arrarr = [1, 2, 3, 4, 5, 6, , 1, 22, 34, 5, 6];
 
-function myfind(arrarr,cb){
-    for(var i=0;i<arrarr.length;i++){
-        if(cb(arrarr[i])){
-            return i//arrarr[i]
-        }
+function myfind(arrarr, cb) {
+  for (var i = 0; i < arrarr.length; i++) {
+    if (cb(arrarr[i])) {
+      return i; //arrarr[i]
     }
+  }
 }
 
+var resultfind = myfind(arrarr, function (value) {
+  return value == 4;
+});
+console.log(resultfind);
 
-var resultfind = myfind(arrarr,function(value){
-    return value==4
-})
-console.log(resultfind)
+//Return Function
+
+// function greet(msg){
+//   function greetings(name){
+//     return msg+''+'!'
+//   }
+//   return greetings
+// }
+
+// var gm=greet('Good morning')
+
+// var msg=gm('tofayel islam')
+// console.log(msg)
+
+// function base(b){
+
+//   return  function (n){
+//     var result=1
+//     for(var i=0;i<b;i++){
+//       result=result*n
+//     }
+//     return result
+//   }
+// }
+
+// var base10= base(10)
+
+// console.log(base10(2))
+
+//Recursive Function
+
+function sayHi(n) {
+  if (n == 0) {
+    return;
+  } else {
+    console.log("hi i am calling");
+  }
+  sayHi(n - 1);
+}
+sayHi(10);
+
+// function sum(n) {
+//   if (n == 1) {
+//     return 1;
+//   }
+//   return n + sum(n - 1);
+// }
+
+// console.log(sum(5));
 
 
 
+//Currying in Javascript
+
+
+
+// function add(a, b, c) {
+//   return a + b + c;
+// }
+
+//console.log(add(1,1,1))
+
+
+function currying(a){
+  return function (b){
+    return function(c){
+      return a+b+c
+    }
+  }
+}
+
+var result100= currying(5)(10)(15)
+console.log(result100)
+
+//Composition of Function
+function print(p){
+  console.log(p)
+}
+
+function multi(n){
+  return n*5
+}
+
+function add(a,b){
+  return a+b
+}
+
+print(multi(add(3,5)))
