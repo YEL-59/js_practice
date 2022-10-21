@@ -102,10 +102,6 @@ console.log(obj.sum(7, 9));
 
 //callback function***important***
 
-
-
-
-
 function sample(a, b, cb) {
   var c = a + b;
   var d = a - b;
@@ -124,49 +120,44 @@ function sample(a, b, cb) {
 
 var result2 = sample(5, 8, function (c, d) {
   //console.log(c,d)
-  return c - d
-})
-console.log(result2)
+  return c - d;
+});
+console.log(result2);
 
 var result3 = sample(5, 8, function (c, d) {
-    //console.log(c,d)
-    return c * d
-  })
-  console.log(result3)
+  //console.log(c,d)
+  return c * d;
+});
+console.log(result3);
 
-  var result4 = sample(5, 8, function (c, d) {
-    //console.log(c,d)
-    return c / d
-  })
-  console.log(result4)
+var result4 = sample(5, 8, function (c, d) {
+  //console.log(c,d)
+  return c / d;
+});
+console.log(result4);
 
+//foreach function
 
+var arr = [1, 2, 3, 4, 5];
+var sum = 0;
+arr.forEach(function (value, index, arr) {
+  console.log(value, index, arr);
+  sum = sum + value;
+});
+console.log("the sum os array is:", sum);
 
-  //foreach function
-
-  var arr=[1,2,3,4,5]
-var sum=0
-  arr.forEach(function(value,index,arr){
-    console.log(value,index,arr)
-    sum=sum+value
-  })
-console.log('the sum os array is:',sum)
-
-
-function forEach(arr,cb){
-    for(var i=0;i<arr.length;i++){
-        //console.log(arr[i])
-        cb(arr[i],i,arr)
-    }
+function forEach(arr, cb) {
+  for (var i = 0; i < arr.length; i++) {
+    //console.log(arr[i])
+    cb(arr[i], i, arr);
+  }
 }
-var sum=0
-forEach(arr, function(value,index,arr){
-    console.log(value,index,arr)
-    sum=sum+value
-})
-console.log(sum)
-
-
+var sum = 0;
+forEach(arr, function (value, index, arr) {
+  console.log(value, index, arr);
+  sum = sum + value;
+});
+console.log(sum);
 
 // function tofayel (name,x){
 //     console.log(name)
@@ -184,7 +175,7 @@ console.log(sum)
 //     console.log(x)
 //     fc("958729")
 //     l()
-   
+
 // }
 
 // function hello(y){
@@ -197,118 +188,228 @@ console.log(sum)
 // // argument
 // name("tofayel",hello, scl);
 
-
-
-
-function name(x,cb,l){
-    console.log(x)
-    cb()
-    l(2,3)
+function name(x, cb, l) {
+  console.log(x);
+  cb();
+  l(2, 3);
 }
 
-function hello(x){
-    console.log('this is call back!')
+function hello(x) {
+  console.log("this is call back!");
 }
-function lo(x,y){
-    return(x+y)
+function lo(x, y) {
+  return x + y;
 }
 
-name('tofayel islam',hello,lo)
-
+name("tofayel islam", hello, lo);
 
 //This is a simple project of call back function
 
-function calculator(x,cb_sum,cb_sub,cb_add,cb_div){
-    console.log('**************************************************')
-    console.log(x)
-    console.log('*****Sum******')
-    cb_sum(2,2)
-    console.log('*****Sub******')
-    cb_sub(2,2)
-    console.log('****Add*******')
-    cb_add(2,2)
-    console.log('****Div*******')
-    cb_div(2,2)
+function calculator(x, cb_sum, cb_sub, cb_add, cb_div) {
+  console.log("**************************************************");
+  console.log(x);
+  console.log("*****Sum******");
+  cb_sum(2, 2);
+  console.log("*****Sub******");
+  cb_sub(2, 2);
+  console.log("****Add*******");
+  cb_add(2, 2);
+  console.log("****Div*******");
+  cb_div(2, 2);
 }
 
-function Sum(x, y){
-    console.log(x+y)
+function Sum(x, y) {
+  console.log(x + y);
 }
-function Sub(x, y){
-    console.log(x-y)
+function Sub(x, y) {
+  console.log(x - y);
 }
-function Add(x, y){
-    console.log(x*y)
+function Add(x, y) {
+  console.log(x * y);
 }
-function Div(x, y){
-    console.log(x/y)
+function Div(x, y) {
+  console.log(x / y);
 }
 
-calculator('CallBack Function',Sum,Sub,Add,Div)
-
+calculator("CallBack Function", Sum, Sub, Add, Div);
 
 // function sample(a, b, cb) {
 //     var x = a + b;
 //     var y = a - b;
 //     console.log(x)
 //     console.log(y)
-  
+
 //     var result = cb(x, y);
 //     return result;
 //   }
-  
- 
-  
+
 //   var result2 = sample(5, 8, function (x, y) {
 //     //console.log(c,d)
 //     return x - y
 //   })
 //   console.log(result2)
-  
+
 //   var result3 = sample(5, 8, function (x, y) {
 //       //console.log(c,d)
 //       return x * y
 //     })
 //     console.log(result3)
-  
+
 //     var result4 = sample(5, 8, function (x, y) {
 //       //console.log(c,d)
 //       return x / y
 //     })
 //     console.log(result4)
 
-console.log('****jakirboss****')
+console.log("****jakirboss****");
 
-
-
-function calculator(a,b,cb){
-    // var a=x+y
-    // var b=x-y
-    var result= cb(a,b)
-    return result
+function calculator(a, b, cb) {
+  // var a=x+y
+  // var b=x-y
+  var result = cb(a, b);
+  return result;
 }
 
-var result_sum=calculator(8,8,function(a,b){
-    return a+b
-})
-console.log(result_sum)
+var result_sum = calculator(8, 8, function (a, b) {
+  return a + b;
+});
+console.log(result_sum);
 
-var result_sub=calculator(8,8,function(a,b){
-    return a-b
-})
-console.log(result_sub)
+var result_sub = calculator(8, 8, function (a, b) {
+  return a - b;
+});
+console.log(result_sub);
 
-var result_adi=calculator(8,8,function(a,b){
-    return a*b
-})
-console.log(result_adi)
+var result_adi = calculator(8, 8, function (a, b) {
+  return a * b;
+});
+console.log(result_adi);
 
-var result_div=calculator(8,8,function(a,b){
-    return a/b
-})
-console.log(result_div)
+var result_div = calculator(8, 8, function (a, b) {
+  return a / b;
+});
+console.log(result_div);
 
-  
+//Map Function
+
+var array = [1, 2, 3, 4, 5];
+//  var sqrArr= arr.map(function(value){
+//     //return Math.random()*10
+//     return value*value
+//  })
+
+//  console.log(arr)
+//  console.log(sqrArr)
+
+function mymap(array, cb) {
+  var newarr = [];
+  for (var i = 0; i < array.length; i++) {
+    //var temp=arr[i]*arr[i]
+    var temp = cb(array[i], array);
+    newarr.push(temp);
+  }
+  return newarr;
+}
+var qb = mymap(array, function (value) {
+  return value * value * value;
+});
+var mten = mymap(array, function (value) {
+  return value * 10;
+});
+console.log(array);
+console.log(mten);
+console.log(qb);
+//console.log(mymap(arr))
+
+//Filter Function
+
+var arr = [4, 8, 1, 3, 5, 6, 4, 3, 9];
+
+function myfilter(arr, cb) {
+  var newArr = [];
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 == 0) {
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
+}
+console.log(myfilter(arr));
+
+var filterArray = [4, 8, 1, 3, 5, 6, 4, 3, 9];
+
+function tofayelfilter(filterArray,cd) {
+  var reArray = [];
+  for (var i = 0; i < filterArray.length; i++) {
+    if (cd(filterArray[i], i,filterArray)) {
+      reArray.push(filterArray[i]);
+    }
+  }
+  return reArray
+}
+
+var result20=tofayelfilter(filterArray,function(value){
+    return value%2==1
+})
+console.log(result20)
+console.log(tofayelfilter(filterArray,function(value){
+    return value>4
+}))
+// var farray=arr.filter(function(value){
+//     return value >4//value%2==0
+// })
+// console.log(farray)
+
+//Reduce Function
+
+var arr5=[1,2,3,4,5]
+var sum = arr5.reduce(function(prev,curr){
+    return prev +curr
+},100)
+var max = arr5.reduce(function(prev,curr){
+    return Math.max(prev,curr)
+},0)
+console.log(sum)
+console.log(max)
+
+
+function myreduce(arr5,cb,acc){
+    for(var i=0;i<arr5.length;i++){
+        acc=cb(acc,arr[i])
+    }
+    return acc
+}
+
+var sum=myreduce(arr5,function(prev,curr){
+    return prev+curr
+},0)
+var max=myreduce(arr5,function(prev,curr){
+    return Math.max(prev,curr)
+},0)
+var min=myreduce(arr5,function(prev,curr){
+    return Math.min(prev,curr)
+},arr5[0])
+
+
+console.log(sum,max,min)
+
+//Find Function
+
+var arrarr=[1,2,3,4,5,6,,1,22,34,5,6]
+
+function myfind(arrarr,cb){
+    for(var i=0;i<arrarr.length;i++){
+        if(cb(arrarr[i])){
+            return i//arrarr[i]
+        }
+    }
+}
+
+
+var resultfind = myfind(arrarr,function(value){
+    return value==4
+})
+console.log(resultfind)
 
 
 
