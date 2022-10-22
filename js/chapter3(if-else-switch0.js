@@ -8,7 +8,7 @@
 // console.log("value of a is ",a);
 // console.log("value of b is ",b);
 
-//switch case study
+// switch case study
 
 // var date= new Date();
 // console.log(date)
@@ -50,7 +50,7 @@
 // }
 
 
-//logical operator
+// logical operator
 
 // var a=10;
 //  b=20;
@@ -73,7 +73,7 @@
 // console.log(check)
 
 
-//ternary operator
+// ternary operator
 
 // var a=prompt("give a number to check odd-even :");
 
@@ -93,7 +93,7 @@
 
 // var result= a%2==0 ? 'even':'odd'
 // console.log(result)
-//condition?"true":"false"...it is use one line statement when it is multiple line that case we use if else switch etc
+// condition?"true":"false"...it is use one line statement when it is multiple line that case we use if else switch etc
 
 // var name=''
 
