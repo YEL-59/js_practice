@@ -61,24 +61,20 @@
 
 //Factory pattern
 
-var creatRect=function(w,h){
-    return{
-        width:w,
-        height:h,
-    
-        draw:function(){
-            console.log('i am rectengale')
-            this.printProperties()
-        },
-    
-        printProperties:function(){
-            console.log('My width is '+ this.width)
-            console.log('My height is'+ this.height)
-        }
-    
-    }
+var creatRect=(w, h) => ({
+    width: w,
+    height: h,
 
-}
+    draw: function () {
+        console.log('i am rectengale')
+        this.printProperties()
+    },
+
+    printProperties: function () {
+        console.log('My width is ' + this.width)
+        console.log('My height is' + this.height)
+    }
+})
 
 
 var rect1 =creatRect(10,8)
