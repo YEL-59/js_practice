@@ -81,6 +81,8 @@ var rect1 =creatRect(10,8)
 rect1.draw()
 var rect2 =creatRect(11,9)
 rect2.draw()
+var rect3 =creatRect(12,10)
+rect3.draw()
 
 
 //constructor pattern
@@ -100,16 +102,42 @@ var Rectangle=function(w,h){
     }
 }
 
-var rect3= new Rectangle(109,8)
-rect3.draw()
+// var rect3= new Rectangle(110,8)
+// rect3.draw()
+
+//new(new kew word work.how to work new keyword?)
+
+function myNew(constructor){
+
+    var obj={}
+    Object.setPrototypeOf(obj, constructor.prototype)
+    var argsArray=Array.prototype.slice.apply(arguments)
+    constructor.apply(obj, argsArray.slice(1))
+
+    return obj
 
 
 
+}
+var rect4 =myNew(Rectangle,45,30)
+rect4.draw()
 
 
+//constructor Property
+
+// var obj={}
+// var obj=new obj()
+
+var str=new String('str')
+console.log('My string is'+ ' '+str)
 
 
+function test(){
+    console.log('something')
+}
 
+
+//apply call bind ==> use for function calling
 
 
 
