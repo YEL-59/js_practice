@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <h1 class="text-center mt-8 text-5xl">welcome to my baper bank</h1>
+    <main>
+      <section class="bg-green-100 w-3/4 mx-auto mt-8 p-8">
+        <h3 class="text-3xl text-center mb-4">please login</h3>
+        <div style="margin: 0 auto">
+          <from action="">
+            <input
+              class="border-2 border-gray-400 rounded block mb-4 p-2"
+              type="email"
+              name=""
+              id="user-email"
+              placeholder="your email"
+              required
+            />
+            <input
+              class="border-2 border-gray-400 rounded block mb-4 p-2"
+              type="password"
+              name=""
+              id="user-pass"
+              placeholder="your password"
+              required
+            />
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+              <button
+                id="login-submit"
+                type="submit"
+                class="bg-yellow-600 text-white px-4 rounded py-2 font-bold"
+              >
+                submit
+              </button>
+            </div>
+
+            <p class="text-green-500 text-center font-bold" id="warnings"></p>
+            <p class="text-red-400 text-center" id="warning"></p>
+          </from>
+        </div>
+      </section>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
