@@ -22,7 +22,8 @@
 // console.log(add(45,50))
 // let sqr =(x)=>x*x
 
-function testme(){
-    console.log(this)
-}
-testme()
+// function testme(){
+//     console.log(this)
+// }
+// testme()
+ 
