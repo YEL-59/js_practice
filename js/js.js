@@ -84,3 +84,32 @@ const ages=[calage(years[0]),calage(years[1]),calage(years[years.length-1])]
 console.log(ages)
 
 console.log(friends.push('tofayel'))
+
+for(let rep=1;rep<=10;rep++){
+    console.log('yeah it is easy rep is${rep}')
+}
+
+const jonasArray=[
+    'jonas',
+    '123',
+    'ok',
+    ['w','e','t'],
+    true
+]
+const types = []
+for(let i=0;i<jonasArray.length ;i++){
+    console.log(jonasArray[i],typeof jonasArray[i])
+//filling types of array
+    //types[i]=typeof jonasArray[i]
+    types.push(typeof jonasArray[i])
+}
+//types[0]='string'
+console.log(types)
+
+const y= [1991,2007,1996,2020]
+const a=[]
+for(let i=0;i<y.length;i++){
+   // if(typeof jonasArray[i] !== 'string') continue
+    a.push(2037-y[i])
+}
+console.log(a)
