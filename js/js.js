@@ -113,3 +113,4 @@ for(let i=0;i<y.length;i++){
     a.push(2037-y[i])
 }
 console.log(a)
+
