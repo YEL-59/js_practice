@@ -10,6 +10,8 @@
 
 // switch case study
 
+
+
 // var date= new Date();
 // console.log(date)
 // var today = date.getDay();
