@@ -55,40 +55,65 @@
 
 //Array
 
-const friends=['a','b','c']
-console.log(friends)
+// const friends=['a','b','c']
+// console.log(friends)
 
 //const years=new Array(1,2,3,4)
 //console.log(years)
 
-console.log(friends[0])
+// console.log(friends[0])
 
-console.log(friends.length)
-friends[1]='ok'
-console.log(friends)
+// console.log(friends.length)
+// friends[1]='ok'
+// console.log(friends)
 
-function calage(Birthyear){
-    return 2037-Birthyear
+// function calage(Birthyear){
+//     return 2037-Birthyear
 
-}
+// }
 
-const years=[1990,1967,2002,2010,2018]
+// const years=[1990,1967,2002,2010,2018]
 
-console.log(calage(years))
+// console.log(calage(years))
 
-const age1=calage(years[0])
-const age2=calage(years[1])
-const age3=calage(years[years.length-1])
-console.log(age1,age2,age3)
-const ages=[calage(years[0]),calage(years[1]),calage(years[years.length-1])]
-console.log(ages)
+// const age1=calage(years[0])
+// const age2=calage(years[1])
+// const age3=calage(years[years.length-1])
+// console.log(age1,age2,age3)
+// const ages=[calage(years[0]),calage(years[1]),calage(years[years.length-1])]
+// console.log(ages)
 
-console.log(friends.push('tofayel'))
+// console.log(friends.push('tofayel'))
 
-for(let rep=1;rep<=10;rep++){
-    console.log('yeah it is easy rep is${rep}')
-}
+// for(let rep=1;rep<=10;rep++){
+//     console.log('yeah it is easy rep is${rep}')
+// }
 
+// const jonasArray=[
+//     'jonas',
+//     '123',
+//     'ok',
+//     ['w','e','t'],
+//     true
+// ]
+// const types = []
+// for(let i=0;i<jonasArray.length ;i++){
+//     console.log(jonasArray[i],typeof jonasArray[i])
+// //filling types of array
+//     //types[i]=typeof jonasArray[i]
+//     types.push(typeof jonasArray[i])
+// }
+//types[0]='string'
+// console.log(types)
+
+// const y= [1991,2007,1996,2020]
+// const a=[]
+// for(let i=0;i<y.length;i++){
+//    // if(typeof jonasArray[i] !== 'string') continue
+//     a.push(2037-y[i])
+// }
+// console.log(a)
+console.log('---ONLY STRINGS---')
 const jonasArray=[
     'jonas',
     '123',
@@ -98,19 +123,36 @@ const jonasArray=[
 ]
 const types = []
 for(let i=0;i<jonasArray.length ;i++){
+    if(typeof jonasArray[i] !== 'string') continue
     console.log(jonasArray[i],typeof jonasArray[i])
 //filling types of array
     //types[i]=typeof jonasArray[i]
     types.push(typeof jonasArray[i])
 }
-//types[0]='string'
-console.log(types)
+console.log(123)
 
-const y= [1991,2007,1996,2020]
-const a=[]
-for(let i=0;i<y.length;i++){
-   // if(typeof jonasArray[i] !== 'string') continue
-    a.push(2037-y[i])
+
+const flight = 'LH234'
+const jonas={
+    name:'jonas islam',
+    passport:123456789,
+    ticket:123456789,
+
 }
-console.log(a)
+
+const checkin=function(flightNum,passenger){
+    flightNum='LH999'
+    passenger.name='Mr.'+ passenger.name;
+if(passenger.passport === 123456789){
+    alert('check in')
+}else{
+    alert('wrong passport')
+
+}
+}
+checkin(flight,jonas)
+console.log (flight)    
+console.log(jonas)
+
+
 
