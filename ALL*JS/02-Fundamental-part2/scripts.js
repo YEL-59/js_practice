@@ -113,3 +113,39 @@ const yearsUntilRetirement = function (birthYeah, firstName) {
 console.log(yearsUntilRetirement(1991, 'Jonas'));
 console.log(yearsUntilRetirement(1950, 'Mike'));
 */
+
+///////////////////////////////////////
+// Introduction to Arrays
+
+const friends = ['Michael', 'Steven', 'Peter'];
+console.log(friends);
+//add items in array
+const newLength = friends.push('Jay');
+const newLength1 = friends.unshift('John');
+console.log(friends);
+
+//remove items in array
+ 
+
+
+const popped = friends.pop();
+console.log(friends);
+
+const shifted = friends.shift();
+console.log(friends);
+
+console.log(friends.indexOf('Steven'));
+console.log(friends.indexOf('Bob'));
+
+friends.push(23);
+console.log(friends);
+console.log(friends.includes(23));
+if(friends.includes('Steven')){
+    console.log('You have a friend called Steven');
+}
+
+
+
+
+
+
