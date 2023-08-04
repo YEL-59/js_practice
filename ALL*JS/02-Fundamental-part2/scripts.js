@@ -1,5 +1,3 @@
-
-
 /*
 ///////////////////////////////////////
 // Activating Strict Mode
@@ -112,7 +110,7 @@ const yearsUntilRetirement = function (birthYeah, firstName) {
 
 console.log(yearsUntilRetirement(1991, 'Jonas'));
 console.log(yearsUntilRetirement(1950, 'Mike'));
-*/
+
 
 ///////////////////////////////////////
 // Introduction to Arrays
@@ -144,6 +142,111 @@ if(friends.includes('Steven')){
     console.log('You have a friend called Steven');
 }
 
+
+const jonas = [
+  "Jonas",
+  "Schmedtmann",
+  2037 - 1991,
+  "teacher",
+  ["Michael", "Peter", "Steven"],
+  true,
+  "hey",
+];
+const types = [];
+
+console.log(jonas.length - 1);
+console.log(typeof jonas);
+// console.log(jonas[1])
+// ...
+// console.log(jonas[4])
+// jonas[5] does NOT exist
+
+for (let i = 0; i < jonas.length; i++) {
+  if (typeof jonas[i] == "string") {
+    types.push(jonas[i]);
+  }
+}
+
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+console.log(years[Math.floor(Math.random()*years.length)]);
+const ages = [];
+const age = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i]);
+  if (ages[i] > 18) {
+    console.log(`Age ${i + 1} is ${ages[i]}, he is adult`);
+    age.push(ages[i]);
+  } else {
+    console.log(`Age ${i + 1} is ${ages[i]}, he is teenager`);
+  }
+}
+console.log(ages);
+console.log(age);
+
+
+const cars=['BMW','Audi','Toyota','Nissan','Honda'];
+//show random car in console
+console.log(cars[Math.floor(Math.random()*cars.length)]);
+
+
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log('Loop is about to end...');
+}
+*/
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+console.log(bills)
+const tips=[];
+const totals=[];
+// create a assending order sort function
+const sort = function (arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let temp = 0;
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[i]) {
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+      }
+    }
+  }
+};
+sort(bills);
+console.log(bills);
+//create a dessending order sort function
+const sort1 = function (arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let temp = 0;
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] > arr[i]) {
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+      }
+    }
+  }
+};
+sort1(bills);
+console.log(bills);
+
+
+
+
+
+
+//create random 10 bills
+// const bills1 = [];
+// for (let i = 0; i < 10; i++) {
+//   bills1.push(Math.floor(Math.random() * 1000));
+// }
+// console.log(bills1);
 
 
 
