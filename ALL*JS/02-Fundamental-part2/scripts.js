@@ -236,6 +236,137 @@ const sort1 = function (arr) {
 sort1(bills);
 console.log(bills);
 
+//applying merge sort 
+const mergeSort = function (arr) {
+  if (arr.length === 1) {
+    return arr;
+  }
+  const mid = Math.floor(arr.length / 2);
+  const leftArr = arr.slice(0, mid);
+
+  const rightArr = arr.slice(mid);
+  return merge(mergeSort(leftArr), mergeSort(rightArr));
+};
+const merge = function (leftArr, rightArr) {
+  const result = [];
+  let leftIndex = 0;
+  let rightIndex = 0;
+  while (leftIndex < leftArr.length && rightIndex < rightArr.length) {
+    if (leftArr[leftIndex] < rightArr[rightIndex]) {
+      result.push(leftArr[leftIndex]);
+      leftIndex++;
+    } else {
+      result.push(rightArr[rightIndex]);
+      rightIndex++;
+    }
+  }
+  return result.concat(leftArr.slice(leftIndex)).concat(rightArr.slice(rightIndex));
+};
+
+console.log(mergeSort(bills));
+
+//applying quick sort
+const quickSort = function (arr) {
+  if (arr.length <= 1) {
+    return arr;
+  }
+  const pivot = arr[arr.length - 1];
+  const leftArr = [];
+  const rightArr = [];
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] < pivot) {
+      leftArr.push(arr[i]);
+    } else {
+      rightArr.push(arr[i]);
+    }
+  }
+  return [...quickSort(leftArr), pivot, ...quickSort(rightArr)];
+};
+console.log(quickSort(bills));
+
+//applying bubble sort
+const bubbleSort = function (arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let temp = 0;
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[i]) {
+        temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+      }
+    }
+  }
+};
+bubbleSort(bills);
+console.log(bills);
+
+//applying selection sort
+const selectionSort = function (arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let min = i;
+    let temp = 0;
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[min]) min = j;
+    }
+    temp = arr[i];
+    arr[i] = arr[min];
+    arr[min] = temp;
+  }
+};
+selectionSort(bills);
+console.log(bills);
+
+//applying insertion sort
+const insertionSort = function (arr) {
+  for (let i = 1; i < arr.length; i++) {
+    let temp = arr[i];
+    let j = i - 1;
+    while (j >= 0 && temp < arr[j]) {
+      arr[j + 1] = arr[j];
+
+      j--;
+    }
+    arr[j + 1] = temp;
+  }
+};
+insertionSort(bills);
+console.log(bills);
+//applying heap sort
+const heapSort = function (arr) {
+  let n = arr.length;
+  for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
+    heapify(arr, n, i);
+  }
+  for (let i = n - 1; i > 0; i--) {
+    let temp = arr[0];
+    arr[0] = arr[i];
+    arr[i] = temp;
+    heapify(arr, i, 0);
+  }
+};
+const heapify = function (arr, n, i) {
+  let largest = i;
+  let l = 2 * i + 1;
+  let r = 2 * i + 2;
+  if (l < n && arr[l] > arr[largest]) largest = l;
+  if (r < n && arr[r] > arr[largest]) largest = r;
+  if (largest != i) {
+    let temp = arr[i];
+
+    arr[i] = arr[largest];
+    arr[largest] = temp;
+    heapify(arr, n, largest);
+  }
+};
+heapSort(bills);
+console.log(bills);
+
+
+
+
+
+//create a function to calculate tip
+
 
 
 
