@@ -226,6 +226,65 @@ console.log(arr73.every(isBelowThreshold2))
 
 
 
+//vowel count in a string
+const st = 'hello world'
+
+const str = st.split('')
+const vowels = ['a','e','i','o','u']
+let count = 0
+for(let i = 0; i < str.length; i++){
+    if(vowels.includes(str[i])){
+        count++
+    }
+}
+console.log(count)
+
+//find duplicate in an array
+const arr74 = [1,2,3,4,5,6,7,8,9,1,2,3,4,5,6]
+const arr75 = []
+for(let i = 0; i < arr74.length; i++){
+    if(arr75.includes(arr74[i])){
+        console.log(arr74[i])
+    }else{
+        arr75.push(arr74[i])
+    }
+}
+//find duplicate in an array using filter
+const arr76 = [1,2,3,4,5,6,7,8,9,1,2,3,4,5,6]
+const arr77 = arr76.filter((value, index) => arr76.indexOf(value) !== index)
+console.log(arr77)
+
+//find duplicate in an array using reduce
+const arr78 = [1,2,3,4,5,6,7,8,9,1,2,3,4,5,6]
+const arr79 = arr78.reduce((acc, value) => {
+    if(acc.indexOf(value) === -1){
+        acc.push(value)
+    }
+    return acc
+}
+,[])
+console.log(arr79)
+
+//find duplicate in an array using map
+const arr80 = [1,2,3,4,5,6,7,8,9,1,2,3,4,5,6]
+const arr81 = []
+arr80.map((value) => {
+    if(arr81.includes(value)){
+        console.log(value)
+    }else{
+        arr81.push(value)
+    }
+}
+)
+console.log(arr81)
+
+
+
+
+
+
+
+
 
 
 
