@@ -11,7 +11,7 @@ function calcutalor(num1,num2,callback){
 }
 
 let result=calcutalor(2,5,display)
-console.log(result)
+//console.log(result)
 
 
 // --------------------------------------------
@@ -32,7 +32,7 @@ function takename(callback){
 }
 
 //console.log(takename())
-takename(fullName)
+//takename(fullName)
 
 //0-----------------------
 
@@ -48,8 +48,7 @@ callback()
 function y(){
     console.log('y')
 }
-x(y)
-
+//x(y)
 
 
 
