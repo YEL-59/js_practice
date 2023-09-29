@@ -5,7 +5,7 @@ const status = true
 
 console.log("Task Number 1")
 
-//promise call
+//promise define
 const promise = new Promise((resolve,reject)=>{
   setTimeout(()=>{
     status?resolve("Task Number 2"):reject("failed")
