@@ -2,6 +2,8 @@ const target = Math.round(Math.random() * 100);
 
 let guesses = 0;
 
+
+
 while (true) {
   guesses++;
 
