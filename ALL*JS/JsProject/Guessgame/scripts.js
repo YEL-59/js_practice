@@ -19,3 +19,4 @@ while (true) {
 }
 
 console.log(`You guessed the number in ${guesses} tries!`);
+console.log(`You guessed the number in ${guesses} tries!`);
