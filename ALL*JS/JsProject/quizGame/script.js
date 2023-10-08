@@ -32,6 +32,15 @@ if (answer3.toUpperCase() === correctAnswer3) {
 } else {
   console.log("You got it wrong...");
 }
+const answer4 = prompt("What is the reccomend amount of RAM in 2023? ");
+const correctAnswer4 = "16GB";
+
+if (answer3.toUpperCase() === correctAnswer3) {
+  console.log("You got it correct!");
+  correctAnswers++;
+} else {
+  console.log("You got it wrong...");
+}
 
 const percent = Math.round((correctAnswers / totalQuestions) * 100);
 
