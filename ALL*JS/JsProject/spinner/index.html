@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spinner Wheel</title>
+<style>
+  .container {
+    display: flex;
+  }
+  .names-container {
+    margin-right: 20px;
+  }
+  .names-list {
+    list-style-type: none;
+    padding: 0;
+    font-size: 18px;
+  }
+  .names-list li {
+    margin-bottom: 10px;
+  }
+  .spinner {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+  }
+  .wheel {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#FF5733, #FFC300, #4CAF50, #2196F3, #9C27B0, #FF5733);
+    position: absolute;
+    transform-origin: center;
+    transform: rotate(0deg);
+    transition: transform 3s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #fff;
+  }
+  .button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="names-container">
+      <h2>Names</h2>
+      <ul class="names-list" id="namesList">
+        <!-- Names will be added here using JavaScript -->
+      </ul>
+    </div>
+    <div class="spinner">
+      <div class="wheel" id="wheel">
+        <span id="selectedName">Name</span>
+      </div>
+    </div>
+  </div>
+  <button class="button" onclick="spinWheel()">Spin</button>
+  <div id="result"></div>
+
+  <script>
+    let names = ['Alice', 'Bob', 'Charlie', 'David', 'Eve','ok'];
+    
+    let namesList = document.getElementById('namesList');
+    names.forEach(name => {
+      let listItem = document.createElement('li');
+      listItem.innerText = name;
+      namesList.appendChild(listItem);
+    });
+
+    function spinWheel() {
+      let resultDiv = document.getElementById('result');
+      let randomIndex = Math.floor(Math.random() * names.length);
+      let selectedName = names[randomIndex];
+      resultDiv.innerText = `Selected Name: ${selectedName}`;
+      
+      let wheel = document.getElementById('wheel');
+      let randomRotation = Math.floor(Math.random() * 360) + 360 * 5;
+      wheel.style.transform = `rotate(${randomRotation}deg)`;
+    }
+  </script>
+</body>
+</html>
